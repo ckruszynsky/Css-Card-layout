@@ -46,7 +46,13 @@ grid-template-rows: [row1-start] [row2-start] [row3-start];
 _grid-auto-rows_ and _grid-auto-columns_
 grid-auto-\* can define a set size for tracks created in the implicit grid.
 
-When setting up an explicit grid or defining
+When setting up an explicit grid or defining the sizing for automatically created rows or columns we may want to give tracks a minimum size but also ensure that they expand to fit any content that is added.
+
+For example, You may not want your rows to collapse smaller than 100px but if it stretches to 300 px in height you'd like the row to stretch that height.
+
+To handle the above scenario, use the `minmax()` function in the grid-auto-rows or grid-auto-columnns property.
+
+Using `auto` means that the size will look at the content size and will stretch to give space for the tallest item in the cell.
 
 _fr units_
 _fr_ stands for "fraction of available space". The fr unit can be used for grid-rows and grid-column values.

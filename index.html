@@ -8,7 +8,7 @@
         display: grid;
         grid-gap: 25px;
         grid-template-columns: repeat(3, 1fr);
-        grid-auto-rows: 200px; /* sets the height of each row to 200px */
+        grid-auto-rows: minmax(100px, auto);
       }
       .card {
         border: 1px solid #d3d3d3;
@@ -23,6 +23,8 @@
         background-color: transparent;
         border: 1px solid #2196f3;
         padding: 0.5rem 1rem;
+        margin-top: 10px;
+        width: 100%;
         cursor: pointer;
         border-radius: 0.25rem;
       }
@@ -39,6 +41,7 @@
         <div class="content">
           Some quick example text to build on the card and make up the build of
           the card's content.
+
           <button>View</button>
         </div>
       </div>
